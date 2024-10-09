@@ -28,3 +28,19 @@
         opacity: 1;
     }   
 }
+
+@media screen and (max-width: 767px){
+    .beneficio-container{
+        width: 250px;
+        height: 150px;
+        gap: 10px;
+    }
+
+    .beneficio-container h1{
+        font-size: 17px;
+    }
+
+    .beneficio-container p{
+        font-size: 14px;
+    }
+}

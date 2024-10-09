@@ -68,7 +68,7 @@ export function Header(){
         else if (location.pathname.includes('talleres')){
             setImageUrl('talleres')
         }
-        else if (location.pathname == '/biblioteca'){
+        else if (location.pathname == '/carreras-cortas'){
             setImageUrl('biblioteca')
         }
         
@@ -90,6 +90,7 @@ export function Header(){
         function activarLink(){
             list.forEach((item) => {
                 item.classList.remove("active")
+                console.log(this)
                 this.classList.add("active")
             })
         }
@@ -104,8 +105,6 @@ export function Header(){
         
         <header className={isScrolled ? "header-container top" : "header-container"} id={verHeader ? "header" : "esconder"}>
             <div className='cubridor-header'></div>
-            <div className="right-wall"></div>
-            <div className="left-wall"></div>
             { /* Aqui va el logo de la pagina */ }
             <Link to='/' className="logo-container">
                 <img src={isScrolled ? logoActivo : logo} alt="zaitex-logo" className="logo-zaitex"/>
@@ -131,7 +130,7 @@ export function Header(){
                         <img src={imageUrl == 'talleres' ? tallerActivo : tallerDesactivado} className='logo-talleres' alt="talleres"/>
                         <span className="txtTalleres">Talleres</span>
                     </NavLink>
-                    <NavLink to='/biblioteca' className="biblioteca-btn list">
+                    <NavLink to='/carreras-cortas' className="biblioteca-btn list">
                         <img src={imageUrl == 'biblioteca' ? bibliotecaActivo : bibliotecaDesactivado} className='logo-carreras' alt="bilbioteca" />
                         <span className="txtBiblioteca">Carreras Cortas</span>
                     </NavLink>

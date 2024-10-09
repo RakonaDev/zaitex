@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+.PanelAdmin-container{
+  height: 100dvh;
+}
+
+.form-admin-container{
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-admin-matricula-container{
+  width: 100%;
+  height: 80%;
+  padding: 30px;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-admin{
+  transform: translateX(0) !important;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.btn-group{
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.btn{
+  background-color: #0073ff;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+
+  &:hover{
+    background-color: #0257bf;
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 30px; /* Location of the box */
+  left: 0;
+  top: 0px;
+  width: 100%; /* Full width */
+  height: 100dvh; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 50%;
+  height:800px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 38px;
+  font-weight: bold;
+  transform: translateX(-20px);
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tabla-alumnos{
+  font-family: 'Fredoka';
+  width: 920px;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+
+.table-head{
+  background-color: #CDD3CE;
+}
+
+.table-head .item-head{
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+}
+
+.form-select{
+  width: 440px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #EEEEEE;
+  margin-left: -10px;
+  border: none;
+}
+
+.form-file{
+  width: 430px;
+}
+
+.tabla-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.table-row:hover{
+  background-color: #cdcdcd;
+}
+
+td{
+  height: 25px;
+}

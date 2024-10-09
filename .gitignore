@@ -27,3 +27,4 @@ dist-ssr
 useToken.js
 /src/backend
 backend/*
+backend

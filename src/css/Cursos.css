@@ -39,7 +39,6 @@
     width: 60%;
     height: 800px;
 
-
 }
 
 .formulario-container{
@@ -72,4 +71,49 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 767px){
+    .cursos{
+        top: 40px;
+    }
+
+    .cursos-container .tituloCursos{
+        font-size: 30px;
+        transform: translateY(-70px);
+        right: 20px;
+    }
+
+    .bodyHeader{
+        flex-direction: column-reverse;
+        height: 1400px;
+    }
+
+    .bodyHeader .options-container{
+        position: relative;
+        width: 100%;
+    }
+
+    .bodyHeader .options-container .row-1{
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .bodyHeader .options-container .row-2{
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .bodyHeader .formulario-container{
+        align-items: start;
+        justify-content: center;
+        position: relative;
+        top: -800px;
+        height: 100px;
+        width: 100%;
+    }
 }

@@ -63,7 +63,6 @@ body{
 .explorandoZaitex p{
     position: relative;
     text-align: justify;
-    font-display: flex;
     width: 1450px;
     margin: 0 auto;
     color: #fff;
@@ -130,4 +129,54 @@ body{
 
     75%{margin-left: -300%;}
     100%{margin-left: -300%;}
+}
+
+@media screen and (max-width: 767px){
+    .slide-box{
+        margin-top: 0px;
+        height: 350px;
+        overflow-y: hidden;
+    }
+    .explorandoZaitex{
+        width: 100%;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        text-align: start;
+        padding-left: 0;
+    }
+
+    .explorandoZaitex h1{
+        width: 100%;
+        padding-left: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .explorandoZaitex p{
+        width: 100%;
+        padding-left: 0;
+        font-size: 15px;
+        padding-inline: 0px;
+        margin: 0;
+    }
+
+    .h1-Nosotros{
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    .stroke-word{
+        font-size: 30px;
+    }
+
+    .semiFooter-container .titulo{
+        font-size: 30px;
+    }
+
+    .beneficios-nosotros .row-1, .beneficios-nosotros .row-2{
+        gap: 0px;
+    }
 }

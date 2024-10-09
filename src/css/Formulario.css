@@ -116,3 +116,58 @@ label{
 #talleres option{
     background-color: #EEEEEE;
 }
+
+@media screen and (max-width: 767px){
+    .ruta{
+        position: relative;
+        width: 350px;
+        height: 500px;
+        transform: translateY(50px);
+    }
+
+    .header-form{
+        width: 350px;
+        height: 100px;
+    }
+
+    .header-form h1{
+        font-size: 20px;
+    }
+
+    .body-form{
+        width: 350px;
+    }
+
+    .body-form h2{
+        font-size: 16px;
+    }
+
+    .body-form p{
+        margin-left: 0;
+        width: 240px;
+    }
+
+    .body-form p label{
+        font-size: 11px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"]{
+        width: 200px;
+        font-size: 10px;
+        height: 30px;
+    }
+
+    input[type="submit"]{
+        width: 200px;
+        transform: translateX(53px);
+        font-size: 10px;
+    }
+
+    #talleres{
+        width: 250px;
+        height: 35px;
+        font-size: 11px;
+    }
+}

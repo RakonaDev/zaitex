@@ -1,0 +1,33 @@
+.PanelAdmin-container{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.LoginAdmin-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  background-color: #1962ec;
+
+  .form-admin{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+
+    .btn-admin{
+      margin-left: 0;
+      transform: translateX(0);
+    }
+
+    .text-incorrect{
+      color: red;
+      font-size: 11px;
+    }
+  }
+}

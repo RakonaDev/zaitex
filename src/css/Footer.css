@@ -59,3 +59,51 @@ body{
 .copyright p{
     padding-right: 70px;
 }
+
+@media screen and (max-width: 767px){
+    .atencion-container{
+        flex-direction: column;
+        gap: 30px;
+        height: max-content;
+        justify-content: star;
+        align-items: start;
+    }
+
+    .atencion-container .footer-zaitex-logo{
+        width: 100px;
+        margin-top: 30px;
+        margin-left: 70px;
+        justify-content: start;
+    } 
+
+    .atencion-container .atencion-academica, .atencion-container .atencion-alumno{
+        margin-left: 70px;
+    }
+
+    .atencion-container .atencion-alumno h1{
+        font-size: 20px;
+    }
+
+    .atencion-container .atencion-alumno p{
+        font-size: 13px;
+    }
+
+    .atencion-container .atencion-academica h1{
+        font-size: 20px;
+    }
+
+    .atencion-container .atencion-academica p{
+        font-size: 13px;
+    }
+
+    .copyright{
+        height: 70px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .copyright p{
+        text-align: center;
+    }
+}

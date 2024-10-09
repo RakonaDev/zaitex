@@ -279,49 +279,66 @@ a:nth-child(5).active ~ .luna{
   }
 
   .logo-nosotros, .logo-carreras, .logo-inicio, .logo-cursos, .logo-talleres{
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
   }
 
 
   .logo-container{
     align-items: center;
-    height: 80px;
+    height: 51px;
     transform: translateX(-15px);
   }
 
   .logo-zaitex{
-    width: 40px;
+    width: 30px;
   }
 
   .circulo{
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
+    margin-top: 7px;
   }
   
   .circulo::after{
-    height: 90px;
-    transform: translateX(6.8%);
+    height: 60px;
+    transform: translateX(4.27%);
+  }
+
+  .circulo::before{
+    height: 60px;
+    transform: translateX(-99.34%);
   }
   
   .luna{
-    display: none;
+    width: 65px;
+    height: 60px;
+    box-shadow: -2px -48px 0px 10px rgba(255, 255, 255, 1);
+    top: -4px;
   }
-
-  
 
   .nav-container{
     width: 50%;
-    margin-right: 110px;
-    gap: 55px;
+    margin-right: 70px;
+    gap: 45px;
   }
 
   .nav-container .home-btn , .about-btn, .courses-btn, .talleres-btn , .biblioteca-btn{
-    font-size: 11px;
+    width: 40px;
+    font-size: 7px;
+    transform: translateY(-5px);
   }
 
-  .txtCursos, .txtBiblioteca, .txtTalleres{
+  .nav-container .active{
+    transform: translateY(24px);
+  }
+
+  .txtCursos, .txtTalleres{
     margin-top: 1.7px;
+  }
+
+  .txtBiblioteca{
+    transform: translateY(8px);
   }
 
   .nav-container .about-btn{
@@ -330,42 +347,42 @@ a:nth-child(5).active ~ .luna{
   }
 
   a:nth-child(1).active ~ .circulo{
-    transform: translateX(-252%);
+    transform: translateX(-200%);
   }
   
   a:nth-child(1).active ~ .luna{
-    transform: translateX(-272.4%);
+    transform: translateX(-168%);
   }
 
   a:nth-child(2).active ~ .circulo{
-    transform: translateX(-146%);
+    transform: translateX(-123%);
   }
   
   a:nth-child(2).active ~ .luna{
-    transform: translateX(-146.9%);
+    transform: translateX(-103%);
   }
 
   a:nth-child(3).active ~ .circulo{
-    transform: translateX(-40%);
+    transform: translateX(-38%);
   }
   
   a:nth-child(3).active ~ .luna{
-    transform: translateX(-17.9%);
+    transform: translateX(-31%);
   }
 
   a:nth-child(4).active ~ .circulo{
-    transform: translateX(58%);
+    transform: translateX(39%);
   }
   
   a:nth-child(4).active ~ .luna{
-    transform: translateX(108.3%);
+    transform: translateX(33.9%);
   }
 
   a:nth-child(5).active ~ .circulo{
-    transform: translateX(185%);
+    transform: translateX(135%);
   }
   
   a:nth-child(5).active ~ .luna{
-    transform: translateX(241.5%);
+    transform: translateX(115%);
   }
 }

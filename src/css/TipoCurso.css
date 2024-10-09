@@ -50,3 +50,25 @@
     filter: grayscale(0);
     transition: 0.5s;
 }
+
+@media screen and (max-width: 767px){
+    .tipo-container{
+        width: 320px;
+        height: 200px;
+    }
+
+    .logoTipo-container{
+        width: 320px;
+        height: 200px;
+    }
+
+    .capa-oscura{
+        transform: translateY(-205px);
+        width: 320px;
+        height: 200px;
+    }
+
+    .footerTipo-container{
+        width: 320px;
+    }
+}

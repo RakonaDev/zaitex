@@ -1,19 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    modoEdicion : false
-}
+  cursos: Array()
+};
 
-export const edicionSlice = createSlice({
-    name: "edicion",
-    initialState,
-    reducers: {
-        actualizarEdicion: (state, action) => {
-            const { nuevaEdicion } = action.payload;
-            state.modoEdicion = nuevaEdicion
-        },
-    }
-})
+export const cursosSlice = createSlice({
+  name: "cursos",
+  initialState,
+  reducers: {
+    actualizarCursos: (state, action) => {
+      const { nuevosCursos } = action.payload;
+      state.cursos = nuevosCursos;
+    },
+  },
+});
 
-export const { actualizarEdicion } = edicionSlice.actions;
-export default edicionSlice.reducer; 
+export const { actualizarCursos } = cursosSlice.actions;
+export default cursosSlice.reducer;

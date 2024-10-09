@@ -25,7 +25,6 @@ export function Redes(){
     const location = useLocation()
 
     const[verRedes, setVerRedes] = useState(true)
-
     /* Esconde la parte de Redes cuando esté en login */ 
     useEffect(() => {
         if(location.pathname.includes('/login')){
@@ -81,11 +80,10 @@ export function Redes(){
     return(
         <div className={verRedes ? "redes-container": "esconder"}>
             <div className='links-container'>
-                <a href="#" className='link-item' onMouseOver={() => activarLogo("facebook")} onMouseOut={() => desactivarLogo("facebook")}><img src={facebook == "desactivado" ? logoFacebook : logoFacebookActivo} alt="" width={"10spx"} /></a>
-                <a href="#" className='link-item' onMouseOver={() => activarLogo("twitter")} onMouseOut={() => desactivarLogo("twitter")}><img src={twitter == "desactivado" ? logoTwitter : logoTwitterActivo} alt="" width={"15px"} /></a>
-                <a href="#" className='link-item' onMouseOver={() => activarLogo("instagram")} onMouseOut={() => desactivarLogo("instagram")}><img src={instagram == "desactivado" ? logoInstagram : logoInstagramActivo} alt="" width={"18px"} /></a>
-                <a href="#" className='link-item' onMouseOver={() => activarLogo("youtube")} onMouseOut={() => desactivarLogo("youtube")}><img src={youtube == "desactivado" ? logoYoutube : logoYoutubeActivo} alt="" width={"18px"} /></a>
-                <a href="#" className='link-item' onMouseOver={() => activarLogo("tiktok")} onMouseOut={() => desactivarLogo("tiktok")}><img src={tiktok == "desactivado" ? logoTiktok : logoTiktokActivo} alt="" width={"15px"} /></a>
+                <a href="https://www.facebook.com/people/Zai-Tex/61553965931947/?locale=es_LA" target='_blank' className='link-item' onMouseOver={() => activarLogo("facebook")} onMouseOut={() => desactivarLogo("facebook")}><img src={facebook == "desactivado" ? logoFacebook : logoFacebookActivo} alt="" width={"10spx"} /></a>
+                <a href="https://www.instagram.com/zaitex_01/" target='_blank' className='link-item' onMouseOver={() => activarLogo("instagram")} onMouseOut={() => desactivarLogo("instagram")}><img src={instagram == "desactivado" ? logoInstagram : logoInstagramActivo} alt="" width={"18px"} /></a>
+                <a href="https://www.youtube.com/@InstitutoZaitex" target='_blank' className='link-item' onMouseOver={() => activarLogo("youtube")} onMouseOut={() => desactivarLogo("youtube")}><img src={youtube == "desactivado" ? logoYoutube : logoYoutubeActivo} alt="" width={"18px"} /></a>
+                <a href="https://www.tiktok.com/@zaitex_01?_t=8piiqccT6sX&_r=1" target='_blank' className='link-item' onMouseOver={() => activarLogo("tiktok")} onMouseOut={() => desactivarLogo("tiktok")}><img src={tiktok == "desactivado" ? logoTiktok : logoTiktokActivo} alt="" width={"15px"} /></a>
             </div>
             <div className='Sesion-container'>
                 <img src={logoUser} alt="" width={"20px"}/>

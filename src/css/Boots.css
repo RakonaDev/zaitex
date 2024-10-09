@@ -1,0 +1,131 @@
+.mt-5{
+  margin-top: 50px;
+}
+
+.mt-4{
+  margin-top: 40px;
+}
+
+.mt-3{
+  margin-top: 30px;
+}
+
+.mt-2{
+  margin-top: 20px;
+}
+
+.mt-1{
+  margin-top: 10px;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.justify-content-end{
+  justify-content: flex-end;
+}
+
+.justify-content-start{
+  justify-content: flex-start;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.align-items-end{
+  align-items: flex-end;
+}
+
+.align-items-start{
+  align-items: flex-start;
+}
+
+.align-items-baseline{
+  align-items: baseline;
+}
+
+.align-items-stretch{
+  align-items: stretch;
+}
+
+.align-content-center{
+  align-content: center;
+}
+
+.align-content-end{
+  align-content: flex-end;
+}
+
+.align-content-start{
+  align-content: flex-start;
+}
+
+.align-content-between{
+  align-content: space-between;
+}
+
+.align-content-around{
+  align-content: space-around;
+}
+
+.align-content-stretch{
+  align-content: stretch;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+
+.text-light{
+  color: white;
+}
+
+.text-black{
+  color: black;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.form-control{
+  width: 390px;
+  font-size: 16px;
+  height: 45px;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  border: none;
+  padding-left: 50px;
+  margin-left: -10px;
+  margin-bottom: 0px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .form-control{
+    width: 200px;
+    font-size: 10px;
+    height: 30px;
+  }
+}

@@ -16,3 +16,18 @@
     color: #fff;
     transition: 0.5s;
 }
+
+@media screen and (max-width: 767px){
+    .ofre-container{
+        width: 250px;
+        height: 220px;
+    }
+
+    .ofre-container h1{
+        font-size: 18px;
+    }
+
+    .ofre-container p{
+        font-size: 14px;
+    }
+}
