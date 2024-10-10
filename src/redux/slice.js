@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   codigo_alumno: "",
+  hash_codigo: "",
   nombre_alumno: "",
   apellido_alumno: "",
   foto_alumno: "",
@@ -29,6 +30,7 @@ export const userSlice = createSlice({
         contrasena,
         sexo,
         contacto,
+        hash_codigo
       } = action.payload;
       state.codigo_alumno = codigo_alumno;
       state.nombre_alumno = nombre_alumno;
@@ -40,6 +42,7 @@ export const userSlice = createSlice({
       state.contrasena = contrasena;
       state.contacto = contacto;
       state.sexo = sexo;
+      state.hash_codigo = hash_codigo;
     },
     actualizarUser: (state, action) => {
       const { gmail_recuperacion, sexo, contacto } = action.payload;

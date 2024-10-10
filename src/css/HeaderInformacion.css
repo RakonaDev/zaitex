@@ -1,116 +1,138 @@
-.headerInformacion-container{
-    position: fixed;
-    top: 0;
-    background-color: #1962EC; /* #1962EC */
-    width: 350px;
-    height: 100vh;
-    transition: 0.5s;
-    z-index: 300;
+.headerInformacion-container {
+  position: fixed;
+  top: 0;
+  background-color: #1962ec; /* #1962EC */
+  width: 350px;
+  height: 100%;
+  min-height: 650px;
+  transition: 0.5s;
+  z-index: 300;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
-.headerInformacion-logo{
-    position: relative;
-    margin: 80px 100px;
-    transition: 0.5s;
+@media (width < 768px) {
+
+  .headerInformacion-container{
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    overflow-anchor: auto;
+    scrollbar-width: thin;
+  }
+
+  .headerInformacion-container .extender{
+    position: relative !important;
+    margin-right: 20px;
+    bottom: 0 !important;
+    right: 0 !important;
+
+  }
 }
 
-.headerInformacion-container.palanca{
-    width: 93px;
+.headerInformacion-logo {
+  position: relative;
+  margin: 80px 100px;
+  transition: 0.5s;
 }
 
-.headerInformacion-logo.palanca{
-    margin: 80px 0px;
-    width: 100px;
+.headerInformacion-container.palanca {
+  width: 93px;
 }
 
-.headerInformacion-container .extender{
-    height: 26px;
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    cursor: pointer;
-    transition: 0.5s;
+.headerInformacion-logo.palanca {
+  margin: 80px 0px;
+  width: 100px;
 }
 
-.headerInformacion-container .extender.rotate{
-    transform: rotateZ(180deg);
+.headerInformacion-container .extender {
+  height: 26px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-.headerInformacion-options{
-    display: flex;
-    flex-direction: column;
-    height: 300px;
+.headerInformacion-container .extender.rotate {
+  transform: rotateZ(180deg);
 }
 
-.headerInformacion-options .option-item{
-    color: #fff;
-    margin: 15px -25px;
-    width: 260px;
-    height: 55px;
-    display: flex;
-    gap: 15px;
-    font-weight: 600;
-    transition: 0.5s;
+.headerInformacion-options {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
 }
 
-.headerInformacion-container .cubridor{
-    position: absolute;
-    width: 297px;
-    height: 60px;
-    background-color: white;
-    left: -10px;
-    z-index: -1;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    transition: 0.5s;
-    transform: translateY(11px);
+.headerInformacion-options .option-item {
+  color: #fff;
+  margin: 15px -25px;
+  width: 260px;
+  height: 55px;
+  display: flex;
+  gap: 15px;
+  font-weight: 600;
+  transition: 0.5s;
 }
 
-.headerInformacion-container .cubridor.apretar{
-    position: absolute;
-    width: 86px;
-    transform: translateY(10px);
+.headerInformacion-container .cubridor {
+  position: absolute;
+  width: 297px;
+  height: 60px;
+  background-color: white;
+  left: -10px;
+  z-index: -1;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  transition: 0.5s;
+  transform: translateY(11px);
 }
 
-.headerInformacion-container .cubridor.inicio{
-    transform: translateY(11px);
+.headerInformacion-container .cubridor.apretar {
+  position: absolute;
+  width: 86px;
+  transform: translateY(10px);
 }
 
-.headerInformacion-container .cubridor.biblioteca{
-    transform: translateY(95px);
+.headerInformacion-container .cubridor.inicio {
+  transform: translateY(11px);
 }
 
-.headerInformacion-container .cubridor.pagos{
-    transform: translateY(181px);
+.headerInformacion-container .cubridor.biblioteca {
+  transform: translateY(95px);
 }
 
-.headerInformacion-options .option-item.encoger{
-    width: 20px;
-    height: 55px;
-    transition: 0.5s;
+.headerInformacion-container .cubridor.pagos {
+  transform: translateY(181px);
 }
 
-.headerInformacion-options .option-item p{
-    width: 100px;
+.headerInformacion-options .option-item.encoger {
+  width: 20px;
+  height: 55px;
+  transition: 0.5s;
 }
 
-.headerInformacion-options .seleccionado{
-    background-color: white;
-    width: 292px;
-    height: 57px;
-    display: flex;
-    flex-direction: row;
-    transform: translateX(-45px);
-
+.headerInformacion-options .option-item p {
+  width: 100px;
 }
 
-.abajoLogo{
-    transform: translateX(60px);
+.headerInformacion-options .seleccionado {
+  background-color: white;
+  width: 292px;
+  height: 57px;
+  display: flex;
+  flex-direction: row;
+  transform: translateX(-45px);
 }
 
+.abajoLogo {
+  transform: translateX(60px);
+}
 
-
-.guardarParrafo{
-    opacity: 0;
-    transition: 0.7;
+.guardarParrafo {
+  opacity: 0;
+  transition: 0.7;
 }

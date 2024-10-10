@@ -11,8 +11,18 @@ import zaitexBannerLogo from "../img/Login/zaitexBanner-logo.svg";
 export const Perfil = () => {
   const user = useSelector((state) => state.user);
 
+  const logout = () => {
+    sessionStorage.clear();
+    window.location.pathname = "/login";
+  };
+
   return (
-    <div className="mostrarPerfil-container">
+    <div
+      className="mostrarPerfil-container"
+      style={
+        !location.pathname.includes("datos-personales") ? {animation: "top-in 0.7s", top: "100px"} : {}        
+      }
+    >
       <div className="banner-perfil">
         <img src={zaitexBannerLogo} alt="" className="zaitexBannerLogo" />
         <img src={fotoBanner} alt="" className="fotoBanner" />
@@ -31,7 +41,7 @@ export const Perfil = () => {
           <img src={miCuenta} alt="" />
           <p>Mi cuenta</p>
         </Link>
-        <button type="button" className="boton-footerPerfil">
+        <button type="button" className="boton-footerPerfil" onClick={() => logout()}>
           <img src={cerrarSesion} alt="" />
           <p>Cerrar Sesión</p>
         </button>

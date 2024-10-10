@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../css/Login.css";
 
 import { useFetch } from "../Servicios/useFetch";
@@ -8,9 +8,20 @@ import backgroundLogin from "../img/Login/backgroundLogin.jpg";
 import logoZaitex from "../img/Login/logoZaitex.svg";
 import ojoCerrado from "../img/Login/ojoCerrado.svg";
 import ojoAbierto from "../img/Login/ojoAbierto.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser } from "../redux/slice";
+import { useAuth } from "../hooks/useAuth";
 
 export function Login() {
   const [cambio, setCambio] = useState(false);
+  const usuario = JSON.parse(sessionStorage.getItem("tokenUsuario"));
+  const user = useSelector((state) => state.user);
+
+  useEffect(() => {
+    if (!useAuth(usuario)) {
+      window.location.pathname = "/login/inicio";
+    }
+  },[])
 
   function mostrarContraseña() {
     setCambio(!cambio);
@@ -18,14 +29,14 @@ export function Login() {
 
   function enviandoElementos(event) {
     event.preventDefault();
-    console.log(document.getElementById("contrasenaLogin").value);
-    console.log(document.getElementById("codigoLogin").value);
 
     var codigo = document.getElementById("codigoLogin").value;
     var contrasena = document.getElementById("contrasenaLogin").value;
 
     const encontrado = useFetch(codigo, contrasena);
-    console.log(encontrado);
+    if(encontrado){
+      useDispatch(addUser(JSON.parse(sessionStorage.getItem("tokenUsuario"))));
+    }
   }
 
   return (

@@ -1,0 +1,11 @@
+.PagosLogin-container{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .foto-working{
+    width: 40%;
+  }
+}

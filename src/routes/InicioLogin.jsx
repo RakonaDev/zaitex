@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../css/Login/InicioLogin.css";
-import { useSelector } from "react-redux";
+import "../css/Boots.css"
+import { useDispatch, useSelector } from "react-redux";
 import { buscarCursosMatriculados } from "../Servicios/mostrarCursosMatriculados";
 
 import personajeManga from "../img/Ilustracion/personajeManga.png";
@@ -8,10 +9,15 @@ import Ilustrator from "../img/Software/Ilustrator.png";
 import CorelDraw from "../img/Software/CorelDraw.png";
 
 import { TipoCurso } from "../components/TipoCurso";
+import { actualizarCursos } from "../redux/edicionSlice";
+
+import { DividorContext } from "../context/dividorContext";
+import { useAuth } from "../hooks/useAuth";
 
 export function InicioLogin() {
   const user = useSelector((state) => state.user);
-  const [cursos, setCursos] = useState([]);
+  const cursos = useSelector((state) => state.cursos);
+  const dividir = useSelector((state) => state.dividir);
 
   const [mostrarCategoria1, setMostrarCategoria1] = useState(false);
   const [mostrarCategoria2, setMostrarCategoria2] = useState(false);
@@ -21,39 +27,11 @@ export function InicioLogin() {
   const [mostrarCursoIlustrator, setMostrarCursoIlustrator] = useState(false);
   const [mostrarCursoCorel, setMostrarCursoCorel] = useState(false);
 
-  useEffect(() => {
-    buscarCursosMatriculados(localStorage.getItem("tokenCorreo")).then(
-      (data) => {
-        console.log(data);
-        setCursos(data);
-        data.map((item) => {
-          switch (item.id_categoria) {
-            case 1:
-              setMostrarCategoria1(true);
-              break;
-            case 2:
-              setMostrarCategoria2(true);
-              break;
-            case 3:
-              setMostrarCategoria3(true);
-              break;
-          }
-
-          switch (item.id_curso) {
-            case 1:
-              setMostrarCursoPersonaje(true);
-              break;
-            case 2:
-              setMostrarCursoIlustrator(true);
-              break;
-            case 3:
-              setMostrarCursoCorel(true);
-              break;
-          }
-        });
-      }
-    );
-  }, []);
+  const cursosData = buscarCursosMatriculados(
+    user.codigo_alumno,
+    user.hashCodigo
+  );
+  useDispatch(actualizarCursos(cursosData));
 
   const ApartadoCategoria1 = () => {
     return (
@@ -98,13 +76,20 @@ export function InicioLogin() {
     );
   };
 
+  const { setPalanca, palanca } = useContext(DividorContext);
+
   return (
-    <div className="InicioLogin-container">
-      <div className="InicioLogin-Section">
-        <p className="InicioLogin-Titulo">Cursos</p>
-        <div className="Cursos-container">
-          {mostrarCategoria1 ? <ApartadoCategoria1 /> : ""}
-          {mostrarCategoria2 ? <ApartadoCategoria2 /> : ""}
+    <div className="d-flex">
+      <div className={palanca ? "dividorInformacion hidden" : "dividorInformacion"}></div>
+      <div
+        className={palanca ? "InicioLogin-container" : "InicioLogin-container hidden"}
+      >
+        <div className="InicioLogin-Section">
+          <p className="InicioLogin-Titulo">Cursos</p>
+          <div className="Cursos-container">
+            {mostrarCategoria1 ? <ApartadoCategoria1 /> : ""}
+            {mostrarCategoria2 ? <ApartadoCategoria2 /> : ""}
+          </div>
         </div>
       </div>
     </div>
